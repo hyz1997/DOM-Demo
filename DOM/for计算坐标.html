@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>for循环</title>
+	<style type="text/css">
+        .a {width: 100px;height: 100px; position: absolute;top: 0;left: 0; font-size: 30px;background-color: red; line-height: 100px;text-align: center;}
+    </style>
+    <script type="text/javascript">
+    window.onload = function() {
+        div = document.getElementsByTagName('div');
+        var a = 0;
+        for (var i = 0; i < 31; i++) {
+            a = i%10;
+
+            document.body.innerHTML += '<div class="a">'+i+'</div>';
+        }
+        for (var i = 0; i < div.length; i++) {
+            if(i<11) {
+                div[i].style.left = 110*i + "px";
+            }
+            else if (i<21) {
+                div[i].style.left = 110*(i-10) + "px";
+                div[i].style.top = 110*1 +"px";
+            }
+            else if(i<31) {
+                div[i].style.left = 110*(i-20) + "px";
+                div[i].style.top = 110*2 +"px";
+            }
+        }
+        /*for (var i = 0; i < div.length; i++) {
+            div[i].style.left = 100*i + "px";
+            var a=0;
+            if (i>=6) {
+                alert(i);
+                a = 10-i;
+                alert(a);
+                div[i].style.top = 100*a + "px";
+            }
+            else {
+            div[i].style.top = 100*i + "px";
+            }
+        };*/
+        
+    }
+	</script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>for循环</title>
+    <meta content="text/html; charset=gb2312">
+	<style type="text/css">
+    </style>
+    <script type="text/javascript">
+    window.onload = function() {
+        var oUl = document.getElementById('list');
+        var aLi = oUl.getElementsByTagName('ul');
+        var len = aLi.length;
+        var aUl = null;
+        for (var i = 0; i <len; i++) {
+            aUl = aLi[i].getElementsByTagName('li');
+            for (var j = 0; j < aUl.length; j++) {
+                aUl[j].style.border = "1px solid red";
+            };
+        };
+    }
+	</script>
+</head>
+<body>
+    <ul id="list">
+        <li>
+            <h1>我的好友</h1>
+            <ul>
+                <li>小红</li>
+                <li>小怡</li>
+                <li>小明</li>
+            </ul>
+        </li>
+        <li>
+            <h1>我的坏友</h1>
+            <ul>
+                <li>小丑</li>
+                <li>小的怡</li>
+                <li>小的明</li>
+            </ul>
+        </li>
+        <li>
+            <h1>我的黑名单</h1>
+            <ul>
+                <li>小是红</li>
+                <li>小是怡</li>
+                <li>小是明</li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>
